@@ -15,12 +15,12 @@
  * @wordpress-plugin
  * Plugin Name:       BoxyBird Last Login
  * Plugin URI:        #
- * Description:       Adds timestamp for the last time a User logged-in.
+ * Description:       Adds timestamp column for the last time a User logged-in.
  * Version:           1.1.0
  * Author:            Andrew Rhyand
  * Author URI:        andrewrhyand.com
- * License:           MIT License
- * License URI:       https://opensource.org/licenses/MIT
+ * License:           GPLv2 or later
+*  License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       boxybird-last-login
  * Domain Path:       /languages
  */
