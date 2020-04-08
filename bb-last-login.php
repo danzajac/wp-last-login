@@ -16,7 +16,7 @@
  * Plugin Name:       BoxyBird Last Login
  * Plugin URI:        #
  * Description:       Adds timestamp for the last time a User logged-in.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            Andrew Rhyand
  * Author URI:        andrewrhyand.com
  * License:           MIT License
@@ -35,12 +35,14 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('BOXYBIRD_LAST_LOGIN', '1.0.0');
+define('BOXYBIRD_LAST_LOGIN', '1.1.0');
 
 /**
  * The core plugin class
  */
 
-require_once plugin_dir_path(__FILE__) . 'includes/BB_Last_Login.php';
+ if (!class_exists('BB_Last_Login')) {
+     require_once plugin_dir_path(__FILE__) . 'includes/BB_Last_Login.php';
 
-BB_Last_Login::init();
+     BB_Last_Login::init();
+ }

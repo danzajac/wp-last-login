@@ -7,7 +7,6 @@ class BB_Last_Login
         add_action('wp_login', [BB_Last_Login::class, 'updateTimestamp'], 10, 2);
         add_filter('manage_users_columns', [BB_Last_Login::class, 'addAdminColumns']);
         add_filter('manage_users_custom_column', [BB_Last_Login::class, 'addTimestamp'], 10, 3);
-        add_filter('manage_users_sortable_columns', [BB_Last_Login::class, 'makeSortable']);
     }
 
     public static function updateTimestamp($user_login, $user)
@@ -31,12 +30,5 @@ class BB_Last_Login
         }
 
         return $value;
-    }
-
-    public static function makeSortable($columns)
-    {
-        $columns['last_login'] = 'last_login';
-
-        return $columns;
     }
 }
